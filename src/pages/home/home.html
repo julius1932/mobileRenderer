@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cellphones
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+        <ion-item-group  *ngFor="let phone of cellphones" >
+          <ion-item-divider color="secondary" >
+           <h2 >{{phone.brand}}</h2>
+        </ion-item-divider>
+        <ion-item  >
+          <a class="noWhiteSpace" href="{{phone.url}}"> {{phone.model}}</a>
+        </ion-item>
+        <ion-item >
+           {{phone.price}}
+        </ion-item>
+        </ion-item-group>
+</ion-content>
